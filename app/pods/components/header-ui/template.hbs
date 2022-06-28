@@ -1,0 +1,34 @@
+<header
+  class='flex justify-between items-center rounded-xl shadow-md px-8 py-3 bg-white'
+>
+  <img
+    src='/img/logo.jpg'
+    alt='Bon appetit bien sûr'
+    class='w-24 duration-200 hover:rotate-3'
+  />
+  <nav>
+    <ul class='flex items-center space-x-6'>
+      <li>
+        <LinkTo
+          @route='index'
+          class='rounded-xl px-6 py-2 font-semibold duration-200 hover:bg-blue-600 hover:text-white'
+          @activeClass='bg-blue-600 text-white'
+        >Accueil</LinkTo>
+      </li>
+      <li>
+        <LinkTo
+          @route='search'
+          class='rounded-xl px-6 py-2 font-semibold duration-200 hover:bg-blue-600 hover:text-white'
+          @activeClass='bg-blue-600 text-white'
+        >Recherche</LinkTo>
+      </li>
+      <li>
+        <LinkTo
+          @route='recipes'
+          class='rounded-xl px-6 py-2 font-semibold duration-200 hover:bg-blue-600 hover:text-white'
+          @activeClass='bg-blue-600 text-white'
+        >Recettes</LinkTo>
+      </li>
+    </ul>
+  </nav>
+</header>

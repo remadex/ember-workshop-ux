@@ -1,0 +1,10 @@
+{{page-title 'Application'}}
+<div class='w-full flex flex-col p-8 min-h-screen'>
+  <HeaderUi />
+  <main class='flex-grow p-8'>
+    {{outlet}}
+  </main>
+</div>
+<WhileLoading>
+  <LoadingIndicator />
+</WhileLoading>

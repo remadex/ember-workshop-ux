@@ -3,6 +3,8 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-workshop',
+    podModulePrefix: 'ember-workshop/pods',
+    apiPath: 'http://localhost:8080',
     environment,
     rootURL: '/',
     locationType: 'history',

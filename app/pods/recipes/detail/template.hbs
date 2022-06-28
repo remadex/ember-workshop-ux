@@ -1,0 +1,13 @@
+{{page-title 'Detail'}}
+<h2 class='text-6xl text-center text-yellow-800'>{{this.model.name}}</h2>
+<p class='mt-4 rounded bg-white p-8'>
+  <h3 class='text-4xl text-lime-900 mb-4'>Préparation</h3>
+  {{this.model.preparation}}
+</p>
+<h2 class='text-4xl pl-8 text-yellow-800'>Ingredients</h2>
+{{#each this.model.ingredients as |ingredient|}}
+  <p class='mt-2'>
+    -
+    {{ingredient.name}}
+  </p>
+{{/each}}

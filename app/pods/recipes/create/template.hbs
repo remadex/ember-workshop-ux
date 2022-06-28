@@ -1,0 +1,39 @@
+{{page-title 'Create'}}
+<h2 class='text-6xl text-center text-yellow-800'>Créer une recette</h2>
+
+<form {{on 'submit' this.saveRecipe}}>
+  <div class='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+    <div class='form-control input'>
+      <label for='name'>Nom de la recette</label>
+      <Input @type='text' id='name' @value={{this.recipe.name}} />
+    </div>
+    <div class='form-control input'>
+      <label for='time'>Durée de la préparation</label>
+      <Input @type='number' id='time' @value={{this.recipe.time}} />
+    </div>
+    <div class='form-control textarea'>
+      <label for='preparation'>Etape de la préparation</label>
+      <Textarea id='preparation' @value={{this.recipe.preparation}} />
+    </div>
+    <div class='form-control select'>
+      <label for='ingredients' class='mb-1'>Ingrédients pour la recette</label>
+      <PowerSelectMultiple
+        @searchEnabled={{true}}
+        @searchField='name'
+        @options={{this.model}}
+        @selected={{this.recipe.ingredients}}
+        @placeholder='Sélectionner des ingrédients'
+        @onChange={{fn (mut this.recipe.ingredients)}}
+        as |ingredient|
+      >
+        {{ingredient.name}}
+      </PowerSelectMultiple>
+    </div>
+  </div>
+  <div class='flex justify-end mt-8'>
+    <button
+      type='submit'
+      class='mb-8 block text-center px-6 py-2 rounded bg-blue-600 text-white duration-200 hover:bg-blue-900'
+    >Sauvegarder</button>
+  </div>
+</form>

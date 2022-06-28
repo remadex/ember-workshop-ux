@@ -1,0 +1,8 @@
+import { Model, hasMany, attr } from 'ember-cli-mirage';
+
+export default Model.extend({
+  name: attr,
+  preparation: attr,
+  time: attr,
+  ingredients: hasMany('ingredient'),
+});
